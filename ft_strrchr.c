@@ -6,48 +6,34 @@
 /*   By: climpras <climpras@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/22 22:44:55 by climpras          #+#    #+#             */
-/*   Updated: 2022/08/23 22:02:30 by climpras         ###   ########.fr       */
+/*   Updated: 2022/08/23 22:20:34 by climpras         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <string.h>
 #include <stdio.h>
 
-int	ft_strlen(const char *s)
-{
-	int	i;
-
-	i = 0;
-	while (s[i])
-	{
-		i++;
-	}
-	return (i);
-}
-
 char	*ft_strrchr(const char *s, int c)
 {
 	const	char	*last;
-	int	len;
-	int	count;
+	int	x;
 	
-	len = ft_strlen(s);
-	count = 0;
+	x = 0;
 	while (*s != '\0')
-	{
-		
+	{	
 		if (*s == c)
-		{
+		{		
 			last = s;
+			x = 1;
 		}
 		s++;
-		len++;
 	}
 	if (*s == c)
 	{
 		return ((char *)s);
 	}
-	if (len == count){
+	if (x == 0)
+	{
 		return (NULL);
 	}
 	return ((char *)last);
@@ -55,6 +41,6 @@ char	*ft_strrchr(const char *s, int c)
 
 int	main(void)
 {
-	printf("%s\n", strrchr("Helllo", 'a'));
-	printf("%s\n", ft_strrchr("Hello", 'a'));
+	printf("%s\n", strrchr("Helllo", 'l'));
+	printf("%s\n", ft_strrchr("Hello", 'l'));
 }
