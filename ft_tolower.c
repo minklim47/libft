@@ -1,33 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   bzero.c                                            :+:      :+:    :+:   */
+/*   ft_tolower.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: climpras <climpras@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/08/23 23:37:40 by climpras          #+#    #+#             */
-/*   Updated: 2022/08/24 00:22:17 by climpras         ###   ########.fr       */
+/*   Created: 2022/08/24 14:33:30 by climpras          #+#    #+#             */
+/*   Updated: 2022/08/24 15:16:32 by climpras         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <string.h>
 #include <stdio.h>
 
-void	ft_bzero(void *s, size_t n)
+int	ft_tolower(int c)
 {
-	if (n > 0)
+	if (c >= 'A' && c <= 'Z')
 	{
-		*(char*)s = '\0';
+		c += 32;
 	}
+	return (c);
 }
 
 int	main(void)
 {
-	char	s1[] = "123456";
-	bzero(s1+3, 3);
-	printf("%s\n", s1);
-
-	char	s2[] = "123456";
-	bzero(s2+3, 3);
-	printf("%s\n", s2);
+	printf("%c\n", ft_tolower('A'));
 }
