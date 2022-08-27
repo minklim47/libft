@@ -1,21 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   libft.h                                            :+:      :+:    :+:   */
+/*   ft_memcmp.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: climpras <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/08/27 11:56:42 by climpras          #+#    #+#             */
-/*   Updated: 2022/08/28 00:15:57 by climpras         ###   ########.fr       */
+/*   Created: 2022/08/28 01:54:19 by climpras          #+#    #+#             */
+/*   Updated: 2022/08/28 02:09:40 by climpras         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef LIBFT_H
-# define LIBFT_H
-# include <stdlib.h>
-# include <unistd.h>
+#include <string.h>
+#include <stdio.h>
 
-size_t ft_strlen(const char *s);
-
-
-#endif
+int	ft_memcmp(const void *s1, const void *s2, size_t n)
+{
+	if (n == 0)
+		return (0);
+	while (n > 0)
+	{
+		if (*(char *)s1 != *(char *)s2)
+			return (*(unsigned char *)s1 - *(unsigned char *)s2);
+		s1++;
+		s2++;
+		n--;
+	}
+	return (0);
+}

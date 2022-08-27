@@ -1,21 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   libft.h                                            :+:      :+:    :+:   */
+/*   ft_strnstr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: climpras <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/08/27 11:56:42 by climpras          #+#    #+#             */
-/*   Updated: 2022/08/28 00:15:57 by climpras         ###   ########.fr       */
+/*   Created: 2022/08/28 02:15:01 by climpras          #+#    #+#             */
+/*   Updated: 2022/08/28 02:46:55 by climpras         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef LIBFT_H
-# define LIBFT_H
-# include <stdlib.h>
-# include <unistd.h>
+#include <stdlib.h>
+#include <stdio.h>
 
-size_t ft_strlen(const char *s);
+char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
+{
+	int	i;
+	int	j;
 
+	i = 0;
+	if (!*needle)
+		return (haystack);
 
-#endif
+}

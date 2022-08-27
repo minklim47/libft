@@ -1,21 +1,40 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   libft.h                                            :+:      :+:    :+:   */
+/*   ft_atoi.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: climpras <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/08/27 11:56:42 by climpras          #+#    #+#             */
-/*   Updated: 2022/08/28 00:15:57 by climpras         ###   ########.fr       */
+/*   Created: 2022/08/28 00:13:28 by climpras          #+#    #+#             */
+/*   Updated: 2022/08/28 01:05:51 by climpras         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef LIBFT_H
-# define LIBFT_H
-# include <stdlib.h>
-# include <unistd.h>
+#include <stdlib.h>
+#include <stdio.h>
 
-size_t ft_strlen(const char *s);
+int	ft_atoi(const char *str)
+{
+	int	i;
+	int	ans;
+	int	neg;
 
-
-#endif
+	i = 0;
+	ans = 0;
+	neg = 1;
+	while ((str[i] >= 9 && str[i] <= 13) || str[i] == 32)
+		i++;
+	if (str[i] == '-')
+	{
+		neg = -1;
+		i++;
+	}
+ 	else if (str[i] == '+')
+		i++;
+	while (str[i] && (str[i] >= '0' && str[i] <= '9'))
+	{
+		ans = (ans * 10) + (str[i] - '0'); 
+		i++;
+	}
+	return (ans * neg);
+}
