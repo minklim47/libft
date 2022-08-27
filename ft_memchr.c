@@ -1,28 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_toupper.c                                       :+:      :+:    :+:   */
+/*   ft_memchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: climpras <climpras@student.42.fr>          +#+  +:+       +#+        */
+/*   By: climpras <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/08/24 14:28:38 by climpras          #+#    #+#             */
-/*   Updated: 2022/08/27 12:26:16 by climpras         ###   ########.fr       */
+/*   Created: 2022/08/27 19:08:54 by climpras          #+#    #+#             */
+/*   Updated: 2022/08/27 19:25:34 by climpras         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include <string.h>
 #include <stdio.h>
 
-int	ft_toupper(int c)
+void	*ft_memchr(const void *s, int c, size_t n)
 {
-	if (c >= 'a' && c <= 'z')
+	while (n > 0 && *(char *)s != c)
 	{
-		c -= 32;
+		s = (char *)s + 1;
+		n--;
 	}
-	return (c);
+	if (n == 0)
+		return (NULL);
+	return ((char *)s);
 }
 /*
 int	main(void)
 {
-	printf("%c\n", ft_toupper('1'));
+	printf("%s\n", memchr("Hello", 'a', 5));
+	printf("%s\n", ft_memchr("Hello", 'a', 5));	
 }
 */

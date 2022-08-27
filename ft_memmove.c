@@ -1,28 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_toupper.c                                       :+:      :+:    :+:   */
+/*   ft_memmove.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: climpras <climpras@student.42.fr>          +#+  +:+       +#+        */
+/*   By: climpras <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/08/24 14:28:38 by climpras          #+#    #+#             */
-/*   Updated: 2022/08/27 12:26:16 by climpras         ###   ########.fr       */
+/*   Created: 2022/08/27 20:02:59 by climpras          #+#    #+#             */
+/*   Updated: 2022/08/27 20:07:06 by climpras         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-
-int	ft_toupper(int c)
+void	*memmove(void *dst, const void *src, size_t len)
 {
-	if (c >= 'a' && c <= 'z')
-	{
-		c -= 32;
-	}
-	return (c);
+	while (
 }
-/*
-int	main(void)
-{
-	printf("%c\n", ft_toupper('1'));
-}
-*/

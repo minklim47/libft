@@ -1,28 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_toupper.c                                       :+:      :+:    :+:   */
+/*   ft_isalpha.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: climpras <climpras@student.42.fr>          +#+  +:+       +#+        */
+/*   By: climpras <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/08/24 14:28:38 by climpras          #+#    #+#             */
-/*   Updated: 2022/08/27 12:26:16 by climpras         ###   ########.fr       */
+/*   Created: 2022/08/26 13:35:11 by climpras          #+#    #+#             */
+/*   Updated: 2022/08/27 12:24:21 by climpras         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+
+#include <string.h>
 #include <stdio.h>
 
-int	ft_toupper(int c)
+int	ft_isalpha(int a)
 {
-	if (c >= 'a' && c <= 'z')
-	{
-		c -= 32;
-	}
-	return (c);
+	if ((a >= 65 && a <= 90) || (a >= 97 && a <= 122))
+		return (1);
+	else
+		return (0);
 }
 /*
 int	main(void)
 {
-	printf("%c\n", ft_toupper('1'));
+	printf("%d\n", ft_isalpha(4));
 }
 */
+
+

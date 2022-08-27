@@ -6,7 +6,7 @@
 /*   By: climpras <climpras@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/24 14:33:30 by climpras          #+#    #+#             */
-/*   Updated: 2022/08/24 15:16:32 by climpras         ###   ########.fr       */
+/*   Updated: 2022/08/27 12:25:26 by climpras         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,8 +20,9 @@ int	ft_tolower(int c)
 	}
 	return (c);
 }
-
+/*
 int	main(void)
 {
 	printf("%c\n", ft_tolower('A'));
 }
+*/

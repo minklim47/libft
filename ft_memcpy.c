@@ -1,32 +1,40 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   ft_memcpy.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: climpras <climpras@student.42.fr>          +#+  +:+       +#+        */
+/*   By: climpras <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/08/24 15:17:45 by climpras          #+#    #+#             */
-/*   Updated: 2022/08/27 12:06:10 by climpras         ###   ########.fr       */
+/*   Created: 2022/08/27 18:47:11 by climpras          #+#    #+#             */
+/*   Updated: 2022/08/27 19:58:13 by climpras         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <string.h>
 #include <stdio.h>
 
-size_t	ft_strlen(const char *s)
+void	*ft_memcpy(void *dst, const void *src, size_t n)
 {
 	int	i;
 
 	i = 0;
-	while (s[i] != '\0')
+	if (!dst && !src)
+		return (dst);
+	while (n > 0)
 	{
+		*((char *)dst+ i) = *((char *)src + i);
 		i++;
+		n--;
 	}
-	return (i);
+	return (dst);
 }
 /*
 int	main(void)
 {
-	printf("%zu\n", strlen(""));
-	printf("%zu\n", ft_strlen(""));
-}*/
+	char	dst[] = "Geeks";
+	char	src[] = "Quiz";
+
+	printf("%s\n", memcpy(dst, src, sizeof(src)));
+	printf("%s\n", ft_memcpy(dst, src, sizeof(src)));	
+}
+*/

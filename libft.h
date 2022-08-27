@@ -1,28 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_toupper.c                                       :+:      :+:    :+:   */
+/*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: climpras <climpras@student.42.fr>          +#+  +:+       +#+        */
+/*   By: climpras <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/08/24 14:28:38 by climpras          #+#    #+#             */
-/*   Updated: 2022/08/27 12:26:16 by climpras         ###   ########.fr       */
+/*   Created: 2022/08/27 11:56:42 by climpras          #+#    #+#             */
+/*   Updated: 2022/08/27 11:59:03 by climpras         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
+#ifndef LIBFT_H
+# define LIBFT_H
+# include <stdlib.h>
+# include <unistd.h>
 
-int	ft_toupper(int c)
-{
-	if (c >= 'a' && c <= 'z')
-	{
-		c -= 32;
-	}
-	return (c);
-}
-/*
-int	main(void)
-{
-	printf("%c\n", ft_toupper('1'));
-}
-*/
+size_t ft_strlen(const char *s);
+
+#endif

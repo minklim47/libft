@@ -6,7 +6,7 @@
 /*   By: climpras <climpras@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/22 21:53:58 by climpras          #+#    #+#             */
-/*   Updated: 2022/08/23 21:49:38 by climpras         ###   ########.fr       */
+/*   Updated: 2022/08/27 12:21:23 by climpras         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,10 +27,11 @@ char	*ft_strchr(const char *s, int c)
 	}
 	return (NULL);	
 }
-
+/*
 int	main(void)
 {
 	//printf("%s\n", strchr("hel", 'e'));
 	printf("%s\n", ft_strchr("hel", 'a'));
 	return (0);
 }
+*/

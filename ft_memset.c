@@ -6,7 +6,7 @@
 /*   By: climpras <climpras@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/23 22:29:46 by climpras          #+#    #+#             */
-/*   Updated: 2022/08/23 23:21:45 by climpras         ###   ########.fr       */
+/*   Updated: 2022/08/27 17:16:05 by climpras         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,18 +14,22 @@
 #include <string.h>
 
 
-void	*ft_memset(void *s, int c, size_t n)
+void	*ft_memset(void *b, int c, size_t len)
 {
-	while (*(char*)s != '\0' && n > 0)
+	int	i;
+
+	i = 0;
+	//while (*((unsigned char*)b + i) != '\0'
+	while (len > 0)
 	{
-		*(char*)s = c;
-		s = (char*)s + 1;
-		n--;
+		*((unsigned char*)b + i) = c;
+		i++;
+		len -= sizeof(char);
 	}
-	return (0);
+	return ((unsigned char *)b);
 }
 
-
+/*
 int	main(void)
 {
 	char	s1[] = "12345678";
@@ -33,7 +37,8 @@ int	main(void)
 	printf("%s\n", s1);
 
 	char	s2[] = "12345678";
-	ft_memset(s2, '1', 10 );
+	ft_memset(s2, '1', 10);
 	printf("%s\n", s2);
 }
-	
+
+	*/
