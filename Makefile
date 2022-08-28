@@ -6,7 +6,7 @@
 #    By: climpras <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/08/27 11:25:36 by climpras          #+#    #+#              #
-#    Updated: 2022/08/28 02:03:13 by climpras         ###   ########.fr        #
+#    Updated: 2022/08/28 09:23:09 by climpras         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -30,7 +30,8 @@ SRCS =  ft_isalpha.c	\
 	ft_memchr.c	\
 	ft_memcmp.c	\
 	ft_strrchr.c	\
-	ft_atoi.c	
+	ft_atoi.c	\
+	ft_strdup.c		
 	
 	
 #SRCSB = 
