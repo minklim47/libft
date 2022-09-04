@@ -6,7 +6,7 @@
 /*   By: climpras <climpras@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/04 10:35:48 by climpras          #+#    #+#             */
-/*   Updated: 2022/09/04 13:51:22 by climpras         ###   ########.fr       */
+/*   Updated: 2022/09/04 16:31:32 by climpras         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,10 +26,44 @@ int	check(char const s1, char const *set)
 char	*ft_strtrim(char const *s1, char const *set)
 {
 	int	i;
-	int
+	int	len;
+	int	size;
+	char	*str;
+	int	j;
 
+	if (!s1 || !set)
+		return (0);
+	len = ft_strlen(s1);
+	i = 0;
+	while (s1[i] && check(s1[i], set) == 1)
+	{
+		i++;
+	}
+	while (check(s1[len - 1], set) == 1)
+	{
+		len--;
+	}
+	size = len + 1 - i;
+	str = malloc(sizeof(char) * size);
+	if (!str)
+		return (0);
+	j = 0;
+	while (i < len)
+	{
+		str[j] = s1[i];
+		i++;
+		j++;
+	}
+	str[j] = '\0';
+	return (str);
 }
-
-
-
-
+/*
+int	main(void)
+{
+	printf("%s\n", ft_strtrim("abcxyzabc", "abc"));
+	printf("%s\n", ft_strtrim("dcxyzabc", "abc"));
+	printf("%s\n", ft_strtrim("abcxyz", "abc"));
+	printf("%s\n", ft_strtrim("xyz", "abc"));
+	printf("%s\n", ft_strtrim("abcxyzc", ""));
+}
+*/

@@ -6,7 +6,7 @@
 /*   By: climpras <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/27 11:56:42 by climpras          #+#    #+#             */
-/*   Updated: 2022/08/30 22:45:45 by climpras         ###   ########.fr       */
+/*   Updated: 2022/09/04 14:51:58 by climpras         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,7 @@
 # include <stdio.h>
 # include <string.h>
 # include <ctype.h>
+# include <stddef.h>
 
 size_t	ft_strlen(const char *s);
 int	ft_atoi(const char *str);

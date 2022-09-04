@@ -6,7 +6,7 @@
 #    By: marvin <marvin@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/08/27 11:25:36 by climpras          #+#    #+#              #
-#    Updated: 2022/09/04 08:42:34 by climpras         ###   ########.fr        #
+#    Updated: 2022/09/04 14:48:59 by climpras         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -23,6 +23,7 @@ SRCS =	ft_isalpha.c	\
 	ft_memset.c	\
 	ft_bzero.c	\
 	ft_memcpy.c	\
+	ft_strlcat.c	\
 	ft_toupper.c	\
 	ft_tolower.c	\
 	ft_strchr.c	\
@@ -32,7 +33,8 @@ SRCS =	ft_isalpha.c	\
 	ft_strrchr.c	\
 	ft_atoi.c	\
 	ft_strdup.c	\
-	ft_substr.c	
+	ft_substr.c	\
+	ft_strtrim.c	
 	
 	
 #SRCSB = 
