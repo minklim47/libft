@@ -1,32 +1,43 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   ft_substr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: climpras <climpras@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/08/24 15:17:45 by climpras          #+#    #+#             */
-/*   Updated: 2022/08/29 23:18:54 by climpras         ###   ########.fr       */
+/*   Created: 2022/08/30 22:53:12 by climpras          #+#    #+#             */
+/*   Updated: 2022/08/30 23:29:02 by climpras         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <string.h>
-#include <stdio.h>
+#include "libft.h"
 
-size_t	ft_strlen(const char *s)
+char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
+	char	*dest;
 	int	i;
-
+	
+	dest = (char *)malloc(sizeof(char) * len + 1);
+	if (!dest || !s)
+		return (NULL);
+	if (start >= ft_strlen(s))
+		return (dest);
 	i = 0;
-	while (s[i] != '\0')
+	while (len > 0 && s[start] != '\0')
 	{
+		dest[i] = s[start];
 		i++;
+		start++;
+		len--;
 	}
-	return (i);
+	dest[i] = '\0';
+	return (dest);
 }
+
 /*
+
 int	main(void)
 {
-	printf("%zu\n", strlen(""));
-	printf("%zu\n", ft_strlen(""));
-}*/
+	printf("%s\n", ft_substr("HelloWorld", 5, 4));	
+}	
+*/

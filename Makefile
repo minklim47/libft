@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: climpras <marvin@42.fr>                    +#+  +:+       +#+         #
+#    By: marvin <marvin@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/08/27 11:25:36 by climpras          #+#    #+#              #
-#    Updated: 2022/08/28 09:23:09 by climpras         ###   ########.fr        #
+#    Updated: 2022/09/04 08:42:34 by climpras         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -14,7 +14,7 @@ FLAGS = -Wall -Werror -Wextra
 NAME = libft.a
 
 #SRCS = $(shell find . -name '*.c')
-SRCS =  ft_isalpha.c	\
+SRCS =	ft_isalpha.c	\
 	ft_isdigit.c	\
 	ft_isalnum.c	\
 	ft_isascii.c	\
@@ -31,7 +31,8 @@ SRCS =  ft_isalpha.c	\
 	ft_memcmp.c	\
 	ft_strrchr.c	\
 	ft_atoi.c	\
-	ft_strdup.c		
+	ft_strdup.c	\
+	ft_substr.c	
 	
 	
 #SRCSB = 
@@ -55,4 +56,8 @@ fclean: clean
 
 re: fclean all
 
+so:
+	gcc -nostartfiles -fPIC $(FLAGS) $(SRCS)
+	gcc -nostartfiles -shared -o libft.so $(OBJS)
+.PHONY: clean fclean re
 
