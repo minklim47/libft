@@ -6,23 +6,21 @@
 /*   By: climpras <climpras@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/23 22:29:46 by climpras          #+#    #+#             */
-/*   Updated: 2022/08/27 17:16:05 by climpras         ###   ########.fr       */
+/*   Updated: 2022/09/17 05:12:41 by climpras         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
 #include <string.h>
 
-
 void	*ft_memset(void *b, int c, size_t len)
 {
 	int	i;
 
 	i = 0;
-	//while (*((unsigned char*)b + i) != '\0'
 	while (len > 0)
 	{
-		*((unsigned char*)b + i) = c;
+		*((unsigned char *)b + i) = c;
 		i++;
 		len -= sizeof(char);
 	}
