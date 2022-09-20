@@ -6,7 +6,7 @@
 /*   By: climpras <climpras@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/30 23:31:09 by climpras          #+#    #+#             */
-/*   Updated: 2022/09/17 04:30:32 by climpras         ###   ########.fr       */
+/*   Updated: 2022/09/19 10:11:02 by climpras         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,26 +16,27 @@ size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 {
 	size_t	i;
 	size_t	j;
-
+	
 	j = ft_strlen(dst);
 	i = 0;
-//	printf("%d", j);
-	if (!dst || !src)
-		return (ft_strlen(dst) + ft_strlen(src));
-	while (dst[j] && i < dstsize - ft_strlen(dst) - 1)
+	if (dstsize < ft_strlen(dst))
+		return (ft_strlen(src) + dstsize);
+	while (src[i] && (j < dstsize - 1))
 	{
 		dst[j] = src[i];
 		j++;
 		i++;
 	}
 	dst[j] = '\0';
-	return (ft_strlen(dst) + dstsize);
+	return (ft_strlen(src) + ft_strlen(dst));
 }
 /*
 int	main(void)
 {
-	char	dst[100] = "Hello";
-	char	const char src[100] = "HI";
-	size_t	dstsize = 7;
-	ft_strlcat(dst, src, dstsize);
+	char	dst1[100] = "Hello";
+	char	dst2[100] = "Hello";
+	const	char src[100] = "HI";
+	size_t	dstsize = 100;
+	printf("real = %lu\n", strlcat(dst1, src, dstsize));
+	printf("mine = %lu\n", ft_strlcat(dst2, src, dstsize));
 }*/
