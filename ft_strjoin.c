@@ -6,7 +6,7 @@
 /*   By: climpras <climpras@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/20 12:42:44 by climpras          #+#    #+#             */
-/*   Updated: 2022/09/20 13:29:36 by climpras         ###   ########.fr       */
+/*   Updated: 2022/09/20 21:55:32 by climpras         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,11 +18,11 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	int	i;
 	int	j;
 
+	if (!s1 || !s2)
+		return (0);
 	str = malloc(ft_strlen(s1) + ft_strlen(s2) + 1);
 	if (!str)
 		return (0);
-	if (*s1 && *s2){
-
 	i = 0;
 	j = 0;
 	while (s1[j] != '\0')
@@ -39,7 +39,6 @@ char	*ft_strjoin(char const *s1, char const *s2)
 		j++;
 	}
 	str[i] = '\0';
-	}
 	return (str);
 }
 /*

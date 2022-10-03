@@ -6,7 +6,7 @@
 /*   By: climpras <climpras@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/04 10:35:48 by climpras          #+#    #+#             */
-/*   Updated: 2022/09/04 16:31:32 by climpras         ###   ########.fr       */
+/*   Updated: 2022/09/22 10:12:00 by climpras         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,7 @@ char	*ft_strtrim(char const *s1, char const *set)
 	char	*str;
 	int	j;
 
-	if (!s1 || !set)
+	if (!s1 && !set)
 		return (0);
 	len = ft_strlen(s1);
 	i = 0;
@@ -55,6 +55,7 @@ char	*ft_strtrim(char const *s1, char const *set)
 		j++;
 	}
 	str[j] = '\0';
+	}
 	return (str);
 }
 /*

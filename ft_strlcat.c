@@ -6,7 +6,7 @@
 /*   By: climpras <climpras@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/30 23:31:09 by climpras          #+#    #+#             */
-/*   Updated: 2022/09/19 10:11:02 by climpras         ###   ########.fr       */
+/*   Updated: 2022/09/20 22:40:29 by climpras         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,21 +14,21 @@
 
 size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 {
-	size_t	i;
 	size_t	j;
-	
+
+	if (dstsize < 1)
+		return (ft_strlen(src) + dstsize);	
 	j = ft_strlen(dst);
-	i = 0;
-	if (dstsize < ft_strlen(dst))
+	if (ft_strlen(dst) >= dstsize)
 		return (ft_strlen(src) + dstsize);
-	while (src[i] && (j < dstsize - 1))
+	while (*src && (j < dstsize - 1))
 	{
-		dst[j] = src[i];
+		dst[j] = *src;
 		j++;
-		i++;
+		src++;
 	}
 	dst[j] = '\0';
-	return (ft_strlen(src) + ft_strlen(dst));
+	return (ft_strlen(src) + j);
 }
 /*
 int	main(void)

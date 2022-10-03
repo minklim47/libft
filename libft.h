@@ -6,7 +6,7 @@
 /*   By: climpras <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/27 11:56:42 by climpras          #+#    #+#             */
-/*   Updated: 2022/09/04 14:51:58 by climpras         ###   ########.fr       */
+/*   Updated: 2022/09/20 22:30:02 by climpras         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@
 size_t	ft_strlen(const char *s);
 int	ft_atoi(const char *str);
 void	ft_bzero(void *s, size_t n);
-void	*calloc(size_t count, size_t size);
+void	*ft_calloc(size_t count, size_t size);
 int	ft_isalnum(int c);
 int     ft_isalpha(int a);
 int     ft_isascii(int c);
@@ -36,6 +36,7 @@ void    *ft_memset(void *b, int c, size_t len);
 char    *ft_strchr(const char *s, int c);
 char    *ft_strdup(const char *s1);
 size_t  ft_strlcpy(char *dst, const char *src, size_t dstsize);
+size_t	ft_strlcat(char *dst, const char *src, size_t dstsize);
 int     ft_strncmp(const char *s1, const char *s2, size_t n);
 char    *ft_strnstr(const char *haystack, const char *needle, size_t len);
 char    *ft_strrchr(const char *s, int c);
