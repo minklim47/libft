@@ -6,7 +6,7 @@
 #    By: marvin <marvin@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/08/27 11:25:36 by climpras          #+#    #+#              #
-#    Updated: 2022/09/20 12:51:11 by climpras         ###   ########.fr        #
+#    Updated: 2022/10/04 01:40:16 by climpras         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -41,6 +41,8 @@ SRCS =	ft_isalpha.c	\
 	ft_strjoin.c	\
 	ft_strtrim.c	\
 	ft_split.c	\
+	ft_strmapi.c	\
+	ft_striteri.c	\
 	ft_putchar_fd.c	\
 	ft_putstr_fd.c	\
 	ft_putendl_fd.c

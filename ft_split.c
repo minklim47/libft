@@ -1,63 +1,67 @@
-#include"libft.h"
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_split.c                                         :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: climpras <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2022/10/03 21:13:24 by climpras          #+#    #+#             */
+/*   Updated: 2022/10/03 23:54:27 by climpras         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
-int    count(const char *str, int c)
+#include "libft.h"
+
+char	**ft_split(char const *s, char c)
 {
-    int    count;
+	int	countWords;
+	int	i;
+	int	j;
+	int	k;
+	char	**arr;
+	int	countChar;
+	int	len;
 
-    count = 0;
-    while (*str !=  '\0')
-    {
-        if (*str == c && *(str + 1) != c && *(str + 1) != '\0')
-            count++;
-        str++;
-    }
-    return (count);
+	len = ft_strlen(s);
+	countWords = 0;
+	i = 0;
+	while (s[i] != '\0') // count the total words
+	{
+		if (s[i] == c && s[i + 1] != c && i != len - 1)
+			countWords++;
+		i++;
+	}
+	arr = malloc(countWords);
+	countChar = 0;
+	i = 0;
+	j = 0;
+	
+	while (*s)
+	{	
+		while (*s == c)
+			s++;
+		while (*s++ != c)
+			countChar++;
+		arr[i] = malloc(countChar);
+		while (s[j] == c)
+			j++;
+		k = 0;
+		while (s[j] != c)
+		{
+			arr[i][k] = s[j];
+			j++;
+		}
+		free(arr[i]);
+		i++;
+	}
+	return (arr);
 }
-
-static char    *find_word(const char *str, int index, int end)
+/*
+int	main(void)
 {
-    int    i;
-    int    tempindex;
-    char    *word;
-
-    i = 0;
-    tempindex = index;
-    word = malloc(end - index + 1);
-    if (!word)
-        return (0);
-    while (index < end)
-        word[i++] = str[index++];
-    if (end != tempindex)    
-        word[i] = 0;
-    return (word);
+	char *s = "_Hello_  _asf__World__";
+	char c = '_';
+	int x = ft_split(s,c);
+	printf("%d\n", x);
 }
-char    **ft_split(const char *s, char c)
-{
-    int    i;
-    int    j;
-    int    tempi;
-    char    **ans;
-
-    i = 0;
-    j = 0;
-    if (!s)
-        return (0);
-    ans = malloc(sizeof(char *) * (count(s, c) + 1));
-    if (!ans)
-        return (0);
-    while (s[i] != '\0')
-    {
-        while (s[i] == c && s[i] != '\0')
-            i++;
-        if (i == 0 || (s[i] != '\0' && s[i] != c && s[i - 1] == c))
-        {
-            tempi = i;
-            while (s[i] != c && s[i] != '\0')
-                i++;
-            ans[j] = find_word(s, tempi, i);
-            j++;
-        }
-    }
-    ans[j] = 0;
-    return (ans);
-}
+*/
