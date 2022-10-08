@@ -6,7 +6,7 @@
 /*   By: climpras <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/28 02:15:01 by climpras          #+#    #+#             */
-/*   Updated: 2022/09/15 21:47:17 by climpras         ###   ########.fr       */
+/*   Updated: 2022/10/08 15:05:23 by climpras         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 	size_t	j;
 
 	if (*needle == '\0')
-		return ((char*)haystack);
+		return ((char *)haystack);
 	if (len < 1)
 		return (0);
 	i = 0;
@@ -31,7 +31,7 @@ char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 				&& (i + j < len))
 				j++;
 			if (j == ft_strlen(needle))
-				return ((char*)(haystack + i));
+				return ((char *)(haystack + i));
 		}
 		i++;
 	}
@@ -46,4 +46,3 @@ int	main(void){
 	printf("%s\n", ft_strnstr(haystack, needle, len));
 }
 */
-

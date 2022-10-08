@@ -6,7 +6,7 @@
 /*   By: climpras <climpras@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/30 22:53:12 by climpras          #+#    #+#             */
-/*   Updated: 2022/10/03 20:53:22 by climpras         ###   ########.fr       */
+/*   Updated: 2022/10/08 15:11:52 by climpras         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,8 +15,8 @@
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
 	char	*dest;
-	int	i;
-	
+	int		i;
+
 	dest = (char *)malloc(sizeof(char) * len + 1);
 	if (!dest || !s)
 		return (NULL);
@@ -33,7 +33,6 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	dest[i] = '\0';
 	return (dest);
 }
-
 /*
 
 int	main(void)

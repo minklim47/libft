@@ -6,7 +6,7 @@
 /*   By: climpras <climpras@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/20 12:11:21 by climpras          #+#    #+#             */
-/*   Updated: 2022/10/08 13:43:16 by climpras         ###   ########.fr       */
+/*   Updated: 2022/10/08 15:20:21 by climpras         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,7 @@ void	ft_putnbr_fd(int n, int fd)
 	else
 	{
 		ft_putnbr_fd(n / 10, fd);
-		c = (n % 10) + '0'; 
+		c = (n % 10) + '0';
 		write(fd, &c, 1);
 	}
 }

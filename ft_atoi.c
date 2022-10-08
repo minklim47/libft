@@ -6,7 +6,7 @@
 /*   By: climpras <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/28 00:13:28 by climpras          #+#    #+#             */
-/*   Updated: 2022/08/28 01:05:51 by climpras         ###   ########.fr       */
+/*   Updated: 2022/10/08 15:06:44 by climpras         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,11 +29,11 @@ int	ft_atoi(const char *str)
 		neg = -1;
 		i++;
 	}
- 	else if (str[i] == '+')
+	else if (str[i] == '+')
 		i++;
 	while (str[i] && (str[i] >= '0' && str[i] <= '9'))
 	{
-		ans = (ans * 10) + (str[i] - '0'); 
+		ans = (ans * 10) + (str[i] - '0');
 		i++;
 	}
 	return (ans * neg);

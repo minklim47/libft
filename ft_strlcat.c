@@ -6,7 +6,7 @@
 /*   By: climpras <climpras@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/30 23:31:09 by climpras          #+#    #+#             */
-/*   Updated: 2022/09/20 22:40:29 by climpras         ###   ########.fr       */
+/*   Updated: 2022/10/08 14:58:53 by climpras         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 	size_t	j;
 
 	if (dstsize < 1)
-		return (ft_strlen(src) + dstsize);	
+		return (ft_strlen(src) + dstsize);
 	j = ft_strlen(dst);
 	if (ft_strlen(dst) >= dstsize)
 		return (ft_strlen(src) + dstsize);

@@ -6,7 +6,7 @@
 /*   By: climpras <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/28 10:35:19 by climpras          #+#    #+#             */
-/*   Updated: 2022/09/17 04:50:12 by climpras         ###   ########.fr       */
+/*   Updated: 2022/10/08 15:25:20 by climpras         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,10 +21,6 @@ void	*ft_calloc(size_t count, size_t size)
 	if (!dest)
 		return (0);
 	i = 0;
-	while (dest[i])
-	{
-		dest[i] = 0;
-		i++;
-	}
+	ft_bzero(dest, count);
 	return (dest);
 }

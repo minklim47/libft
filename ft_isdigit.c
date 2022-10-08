@@ -6,12 +6,11 @@
 /*   By: climpras <climpras@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/24 21:29:00 by climpras          #+#    #+#             */
-/*   Updated: 2022/08/24 22:43:48 by climpras         ###   ########.fr       */
+/*   Updated: 2022/10/08 15:07:56 by climpras         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <ctype.h>
-#include <stdio.h>
+#include "libft.h"
 
 int	ft_isdigit(int c)
 {
@@ -19,5 +18,3 @@ int	ft_isdigit(int c)
 		return (1);
 	return (0);
 }
-
-

@@ -6,17 +6,16 @@
 /*   By: climpras <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/27 14:17:29 by climpras          #+#    #+#             */
-/*   Updated: 2022/08/27 14:23:54 by climpras         ###   ########.fr       */
+/*   Updated: 2022/10/08 15:08:58 by climpras         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <ctype.h>
-#include <stdio.h>
+#include "libft.h"
 
 int	ft_isprint(int c)
 {
 	if (c >= 32 && c <= 126)
 		return (1);
 	else
-		return (0);	
+		return (0);
 }

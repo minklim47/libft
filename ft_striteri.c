@@ -6,7 +6,7 @@
 /*   By: climpras <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/04 01:34:51 by climpras          #+#    #+#             */
-/*   Updated: 2022/10/04 01:48:03 by climpras         ###   ########.fr       */
+/*   Updated: 2022/10/08 15:15:11 by climpras         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,18 +14,18 @@
 
 void	ft_striteri(char *s, void (*f)(unsigned int, char*))
 {
-	int i;
-	int len;
+	int	i;
+	int	len;
 
 	if (!s || !f)
-		return;
+		return ;
 	i = 0;
 	len = ft_strlen(s);
 	if (len <= 0)
-		return;
+		return ;
 	while (i < len)
 	{
 		(*f)(i, s + i);
 		i++;
-	}	
+	}
 }

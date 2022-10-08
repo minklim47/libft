@@ -6,7 +6,7 @@
 /*   By: climpras <climpras@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/04 10:35:48 by climpras          #+#    #+#             */
-/*   Updated: 2022/10/04 01:30:57 by climpras         ###   ########.fr       */
+/*   Updated: 2022/10/08 15:13:52 by climpras         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,11 +25,11 @@ int	check(char const s1, char const *set)
 
 char	*ft_strtrim(char const *s1, char const *set)
 {
-	int	i;
-	int	len;
-	int	size;
+	int		i;
+	int		len;
+	int		size;
 	char	*str;
-	int	j;
+	int		j;
 
 	if (!s1 || !set)
 		return (0);
@@ -64,4 +64,3 @@ int	main(void)
 	printf("%s\n", ft_strtrim("  \n", ""));
 }
 */
-

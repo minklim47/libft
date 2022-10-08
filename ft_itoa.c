@@ -6,7 +6,7 @@
 /*   By: climpras <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/04 11:37:46 by climpras          #+#    #+#             */
-/*   Updated: 2022/10/05 23:01:08 by climpras         ###   ########.fr       */
+/*   Updated: 2022/10/08 15:16:45 by climpras         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,7 @@ int	findsize(int n)
 
 int	power(long n2)
 {
-	int pow;
+	int	pow;
 
 	pow = 1;
 	if (n2 < 0)
@@ -58,13 +58,13 @@ char	*ft_itoa(int n)
 	p = str;
 	j = power(n2);
 	if (n2 < 0)
-	{	
+	{
 		n2 *= -1;
 		*str++ = '-';
 	}
 	while (j >= 1)
 	{
-		*str++ = (n2 / j) + '0'; 
+		*str++ = (n2 / j) + '0';
 		n2 %= j;
 		j /= 10;
 	}

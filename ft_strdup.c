@@ -6,7 +6,7 @@
 /*   By: climpras <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/28 09:02:42 by climpras          #+#    #+#             */
-/*   Updated: 2022/08/28 09:27:39 by climpras         ###   ########.fr       */
+/*   Updated: 2022/10/08 14:58:28 by climpras         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,12 +25,11 @@ int	ft_len(const char *s1)
 
 char	*ft_strdup(const char *s1)
 {
-	int	i;
-	int	len;
+	int		i;
+	int		len;
 	char	*dest;
 
 	len = ft_len(s1);
-	
 	dest = (char *)malloc(sizeof(char) * len + 1);
 	if (!dest)
 		return (NULL);
@@ -42,7 +41,6 @@ char	*ft_strdup(const char *s1)
 	}
 	dest[i] = '\0';
 	return (dest);
-	
 }
 /*
 int	main(void)
@@ -50,4 +48,3 @@ int	main(void)
 	printf("%s\n", ft_strdup("Hello"));
 }
 */
-
