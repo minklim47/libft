@@ -6,7 +6,7 @@
 /*   By: climpras <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/04 11:37:46 by climpras          #+#    #+#             */
-/*   Updated: 2022/10/04 13:18:06 by climpras         ###   ########.fr       */
+/*   Updated: 2022/10/05 23:01:08 by climpras         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,12 +17,11 @@ int	findsize(int n)
 	int	size;
 
 	size = 0;
-	if (n < 0)
+	if (n <= 0)
 	{
 		size++;
-		n *= -1;
 	}
-	while (n > 0)
+	while (n != 0)
 	{
 		n /= 10;
 		size++;
@@ -30,50 +29,51 @@ int	findsize(int n)
 	return (size);
 }
 
-int	power(int n)
+int	power(long n2)
 {
 	int pow;
 
 	pow = 1;
-	while (n > 1)
+	if (n2 < 0)
+		n2 *= -1;
+	while (n2 > 9)
 	{
 		pow *= 10;
-		n--;
+		n2 /= 10;
 	}
 	return (pow);
 }
 
 char	*ft_itoa(int n)
 {
-	int	size;
 	char	*str;
-	int	j;
+	long	j;
 	char	*p;
+	long	n2;
 
-	size = findsize(n);
-	str = malloc(size + 1);
+	n2 = (long)n;
+	str = malloc(findsize(n2) + 1);
 	if (!str)
 		return (0);
 	p = str;
-	if (n < 0)
-	{
-		j = power(size - 1);
-		n *= -1;
+	j = power(n2);
+	if (n2 < 0)
+	{	
+		n2 *= -1;
 		*str++ = '-';
 	}
-	else
-		j = power(size);
 	while (j >= 1)
 	{
-		*str++ = (n / j) + '0'; 
-		n %= j;
+		*str++ = (n2 / j) + '0'; 
+		n2 %= j;
 		j /= 10;
 	}
 	*str = '\0';
 	return (p);
 }
-
+/*
 int	main(void)
 {
-	printf("%s\n",ft_itoa(-123456));
+	printf("%s**\n",ft_itoa(-623));
 }
+*/

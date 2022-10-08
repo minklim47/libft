@@ -6,7 +6,7 @@
 /*   By: climpras <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/27 11:56:42 by climpras          #+#    #+#             */
-/*   Updated: 2022/10/04 12:03:12 by climpras         ###   ########.fr       */
+/*   Updated: 2022/10/08 12:03:50 by climpras         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,6 +45,7 @@ int     ft_toupper(int c);
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char));
 void	ft_striteri(char *s, void (*f)(unsigned int, char*));
 char	*ft_itoa(int n);
+void	ft_putnbr_fd(int n, int fd);
 
 
 #endif

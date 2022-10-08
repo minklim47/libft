@@ -6,26 +6,36 @@
 /*   By: climpras <climpras@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/20 12:11:21 by climpras          #+#    #+#             */
-/*   Updated: 2022/09/20 12:40:27 by climpras         ###   ########.fr       */
+/*   Updated: 2022/10/08 13:43:16 by climpras         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-
-
 void	ft_putnbr_fd(int n, int fd)
 {
-	int	i;
+	char	c;
 
 	if (n < 0)
 	{
 		write(fd, "-", 1);
+		if (n == -2147483648)
+		{
+			write(fd, "2", 1);
+			ft_putnbr_fd(147483648, fd);
+		}
+		else
+			ft_putnbr_fd(n * -1, fd);
 	}
-	i = 0;
-	while (n > 0)
+	else if (n <= 9)
 	{
-		i++;
+		c = n + '0';
+		write(fd, &c, 1);
 	}
-	
+	else
+	{
+		ft_putnbr_fd(n / 10, fd);
+		c = (n % 10) + '0'; 
+		write(fd, &c, 1);
+	}
 }

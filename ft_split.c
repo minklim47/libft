@@ -6,7 +6,7 @@
 /*   By: climpras <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/03 21:13:24 by climpras          #+#    #+#             */
-/*   Updated: 2022/10/03 23:54:27 by climpras         ###   ########.fr       */
+/*   Updated: 2022/10/08 10:57:43 by climpras         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,7 +51,6 @@ char	**ft_split(char const *s, char c)
 			arr[i][k] = s[j];
 			j++;
 		}
-		free(arr[i]);
 		i++;
 	}
 	return (arr);
