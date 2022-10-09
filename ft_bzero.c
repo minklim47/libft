@@ -6,22 +6,21 @@
 /*   By: climpras <climpras@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/24 21:12:10 by climpras          #+#    #+#             */
-/*   Updated: 2022/10/08 14:55:16 by climpras         ###   ########.fr       */
+/*   Updated: 2022/10/08 22:15:32 by climpras         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <string.h>
-#include <stdio.h>
+#include "libft.h"
 
 void	ft_bzero(void *s, size_t n)
 {
-	if (n == 0)
-		return ;
-	while (n > 0)
+	size_t	i;
+
+	i = 0;
+	while (i < n)
 	{
-		*(char *)s = 0;
-		s++;
-		n--;
+		*(char *)(s + i) = 0;
+		i++;
 	}
 }
 /*

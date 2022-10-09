@@ -1,40 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memset.c                                        :+:      :+:    :+:   */
+/*   ft_lstadd_back.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: climpras <climpras@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/08/23 22:29:46 by climpras          #+#    #+#             */
-/*   Updated: 2022/10/08 20:46:48 by climpras         ###   ########.fr       */
+/*   Created: 2022/10/09 19:39:05 by climpras          #+#    #+#             */
+/*   Updated: 2022/10/09 20:47:22 by climpras         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include <string.h>
+#include "libft.h"
 
-void	*ft_memset(void *b, int c, size_t len)
+void	ft_lstadd_back(t_list **lst, t_list *new)
 {
-	int	i;
-
-	i = 0;
-	while (len > 0)
+	t_list	*last;
+	
+	if (*lst)
 	{
-		*(unsigned char *)(b + i) = c;
-		i++;
-		len--;
+		last = ft_lstlast(*lst);
+		last -> next = new;
+		new -> next = NULL;
 	}
-	return (b);
+	else
+		*lst = new;
 }
-/*
-int	main(void)
-{
-	char	s1[] = "12345678";
-	memset(s1, '1', 10);
-	printf("%s\n", s1);
-
-	char	s2[] = "12345678";
-	ft_memset(s2, '1', 10);
-	printf("%s\n", s2);
-}
-*/

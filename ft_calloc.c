@@ -6,7 +6,7 @@
 /*   By: climpras <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/28 10:35:19 by climpras          #+#    #+#             */
-/*   Updated: 2022/10/08 15:25:20 by climpras         ###   ########.fr       */
+/*   Updated: 2022/10/08 22:14:43 by climpras         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,13 +14,11 @@
 
 void	*ft_calloc(size_t count, size_t size)
 {
-	char	*dest;
-	size_t	i;
+	void	*dest;
 
-	dest = (char *)malloc(size * count);
+	dest = (void *)malloc(size * count);
 	if (!dest)
 		return (0);
-	i = 0;
-	ft_bzero(dest, count);
+	ft_bzero(dest, count * size);
 	return (dest);
 }

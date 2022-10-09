@@ -1,40 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memset.c                                        :+:      :+:    :+:   */
+/*   ft_lstlast.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: climpras <climpras@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/08/23 22:29:46 by climpras          #+#    #+#             */
-/*   Updated: 2022/10/08 20:46:48 by climpras         ###   ########.fr       */
+/*   Created: 2022/10/09 17:00:47 by climpras          #+#    #+#             */
+/*   Updated: 2022/10/09 17:23:06 by climpras         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include <string.h>
+#include "libft.h"
 
-void	*ft_memset(void *b, int c, size_t len)
+t_list	*ft_lstlast(t_list *lst)
 {
-	int	i;
-
-	i = 0;
-	while (len > 0)
+	if (!lst)
+		return (0);
+	while (lst -> next && lst)
 	{
-		*(unsigned char *)(b + i) = c;
-		i++;
-		len--;
+		lst = lst -> next;
 	}
-	return (b);
+	return (lst);
 }
-/*
-int	main(void)
-{
-	char	s1[] = "12345678";
-	memset(s1, '1', 10);
-	printf("%s\n", s1);
-
-	char	s2[] = "12345678";
-	ft_memset(s2, '1', 10);
-	printf("%s\n", s2);
-}
-*/

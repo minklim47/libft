@@ -6,14 +6,13 @@
 #    By: marvin <marvin@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/08/27 11:25:36 by climpras          #+#    #+#              #
-#    Updated: 2022/10/08 11:53:26 by climpras         ###   ########.fr        #
+#    Updated: 2022/10/09 23:34:19 by climpras         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 FLAGS = -Wall -Werror -Wextra
 NAME = libft.a
 
-#SRCS = $(shell find . -name '*.c')
 SRCS =	ft_isalpha.c	\
 	ft_isdigit.c	\
 	ft_isalnum.c	\
@@ -47,32 +46,38 @@ SRCS =	ft_isalpha.c	\
 	ft_putchar_fd.c	\
 	ft_putstr_fd.c	\
 	ft_putendl_fd.c	\
-	ft_putnbr_fd.c
+	ft_putnbr_fd.c	\
 	
-	
-#SRCSB = 
 
-OBJS := $(SRCS:.c=.o)
-#OBJSB := $(SRCSB:.c=.o)
+OBJS = $(SRCS:.c=.o)
+
+BONUS =	ft_lstnew.c ft_lstadd_front.c ft_lstsize.c ft_lstlast.c ft_lstadd_back.c \
+	ft_lstdelone.c ft_lstclear.c ft_lstiter.c ft_lstmap.c\
+
+BONUS_OBJS = $(BONUS:.c=.o)
 
 all: $(NAME)
 
 %o: %c
 	gcc $(FLAGS) -c $< -o $@
 
-$(NAME): $(OBJS)
+$(NAME): $(OBJS) $(BONUS_OBJS)
 	ar -rcs $(NAME) $(OBJS)
 
 clean: 
-	rm -f $(OBJS)
+	rm -f $(OBJS) $(BONUS_OBJS)
 
 fclean: clean
 	rm -f $(NAME)
 
-re: fclean all
+bonus: $(OBJS) $(BONUS_OBJS)
+	ar -rcs $(NAME) $(OBJS) $(BONUS_OBJS)
 
 so:
-	gcc -nostartfiles -fPIC $(FLAGS) $(SRCS)
-	gcc -nostartfiles -shared -o libft.so $(OBJS)
-.PHONY: clean fclean re
+	gcc -nostartfiles -fPIC $(FLAGS) $(SRCS) $(BONUS)
+	gcc -nostartfiles -shared -o libft.so $(OBJS) $(BONUS_OBJS)
+
+re: fclean all
+
+.PHONY: clean fclean re bonus
 

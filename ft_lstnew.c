@@ -1,40 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memset.c                                        :+:      :+:    :+:   */
+/*   ft_lstnew.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: climpras <climpras@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/08/23 22:29:46 by climpras          #+#    #+#             */
-/*   Updated: 2022/10/08 20:46:48 by climpras         ###   ########.fr       */
+/*   Created: 2022/10/09 15:17:22 by climpras          #+#    #+#             */
+/*   Updated: 2022/10/09 23:43:02 by climpras         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include <string.h>
+#include "libft.h"
 
-void	*ft_memset(void *b, int c, size_t len)
+t_list	*ft_lstnew(void *content)
 {
-	int	i;
+	t_list	*new;
 
-	i = 0;
-	while (len > 0)
-	{
-		*(unsigned char *)(b + i) = c;
-		i++;
-		len--;
-	}
-	return (b);
+	new = malloc(sizeof(t_list));
+	if (!new)
+		return (0);
+	new -> content = content;
+	new -> next = NULL;
+	return (new);
 }
-/*
-int	main(void)
-{
-	char	s1[] = "12345678";
-	memset(s1, '1', 10);
-	printf("%s\n", s1);
-
-	char	s2[] = "12345678";
-	ft_memset(s2, '1', 10);
-	printf("%s\n", s2);
-}
-*/
