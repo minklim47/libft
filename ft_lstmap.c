@@ -6,7 +6,7 @@
 /*   By: climpras <climpras@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/09 23:11:04 by climpras          #+#    #+#             */
-/*   Updated: 2022/10/09 23:42:50 by climpras         ###   ########.fr       */
+/*   Updated: 2022/10/13 00:03:18 by climpras         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,18 +15,21 @@
 t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 {
 	t_list	*new;
-//	int	onoff;
-//	t_list	*head;
+	t_list	*new_lst;
 
+	new_lst = NULL;
 	if (!lst)
 		return (0);
-	while (lst -> next)
+	while (lst)
 	{
 		new = ft_lstnew((*f)(lst -> content));
-		(*del)(lst -> content);
+		if (!new)
+		{
+			ft_lstclear(&new_lst, del);
+			return (0);
+		}
+		ft_lstadd_back(&new_lst, new);
 		lst = lst -> next;
-		new -> next = lst;
-		new = new -> next;
 	}
-	return (new);
+	return (new_lst);
 }
