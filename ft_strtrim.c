@@ -6,7 +6,7 @@
 /*   By: climpras <climpras@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/04 10:35:48 by climpras          #+#    #+#             */
-/*   Updated: 2022/10/08 15:13:52 by climpras         ###   ########.fr       */
+/*   Updated: 2022/10/13 11:39:38 by climpras         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,11 +14,14 @@
 
 int	check(char const s1, char const *set)
 {
-	while (*set)
+	size_t	i;
+
+	i = 0;
+	while (set[i])
 	{
-		if (s1 == *set)
+		if (s1 == set[i])
 			return (1);
-		set++;
+		i++;
 	}
 	return (0);
 }
@@ -37,12 +40,10 @@ char	*ft_strtrim(char const *s1, char const *set)
 	i = 0;
 	while (s1[i] && check(s1[i], set) == 1)
 		i++;
-	while (s1[len - 1] && check(s1[len - 1], set) == 1)
+	while (len > i && check(s1[len - 1], set) == 1)
 		len--;
-	size = len + 1 - i;
-	if (size <= 0)
-		return (malloc(1));
-	str = malloc(sizeof(char) * size);
+	size = len - i;
+	str = (char *)malloc(sizeof(char) * (size + 1));
 	if (!str)
 		return (0);
 	j = 0;
@@ -54,13 +55,11 @@ char	*ft_strtrim(char const *s1, char const *set)
 /*
 int	main(void)
 {
-
 	printf("%s\n", ft_strtrim("abcxyzabc", "abc"));
 	printf("%s\n", ft_strtrim("dcxyzabc", "abc"));
 	printf("%s\n", ft_strtrim("abcxyz", "abc"));
 	printf("%s\n", ft_strtrim("xyz", "abc"));
 	printf("%s\n", ft_strtrim("abcxyzc", ""));
-
 	printf("%s\n", ft_strtrim("  \n", ""));
 }
 */

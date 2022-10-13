@@ -6,12 +6,11 @@
 /*   By: climpras <climpras@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/23 22:29:46 by climpras          #+#    #+#             */
-/*   Updated: 2022/10/08 20:46:48 by climpras         ###   ########.fr       */
+/*   Updated: 2022/10/13 11:58:41 by climpras         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include <string.h>
+#include "libft.h"
 
 void	*ft_memset(void *b, int c, size_t len)
 {
@@ -26,15 +25,3 @@ void	*ft_memset(void *b, int c, size_t len)
 	}
 	return (b);
 }
-/*
-int	main(void)
-{
-	char	s1[] = "12345678";
-	memset(s1, '1', 10);
-	printf("%s\n", s1);
-
-	char	s2[] = "12345678";
-	ft_memset(s2, '1', 10);
-	printf("%s\n", s2);
-}
-*/
