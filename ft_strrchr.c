@@ -6,7 +6,7 @@
 /*   By: climpras <climpras@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/22 22:44:55 by climpras          #+#    #+#             */
-/*   Updated: 2022/10/13 12:24:14 by climpras         ###   ########.fr       */
+/*   Updated: 2022/10/13 16:23:12 by climpras         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,21 +20,19 @@ char	*ft_strrchr(const char *s, int c)
 	x = 0;
 	while (*s != '\0')
 	{
-		if (*s == c)
+		if (*(unsigned char *)s == (unsigned char)c)
 		{
 			last = s;
 			x = 1;
 		}
 		s++;
 	}
-	if (*s == c)
+	if (*(unsigned char *)s == (unsigned char)c)
 	{
 		return ((char *)s);
 	}
 	if (x == 0)
-	{
 		return (NULL);
-	}
 	return ((char *)last);
 }
 /*
