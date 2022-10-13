@@ -6,12 +6,11 @@
 /*   By: climpras <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/27 18:47:11 by climpras          #+#    #+#             */
-/*   Updated: 2022/10/08 14:55:45 by climpras         ###   ########.fr       */
+/*   Updated: 2022/10/13 12:22:24 by climpras         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <string.h>
-#include <stdio.h>
+#include "libft.h"
 
 void	*ft_memcpy(void *dst, const void *src, size_t n)
 {

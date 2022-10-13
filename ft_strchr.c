@@ -6,12 +6,11 @@
 /*   By: climpras <climpras@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/22 21:53:58 by climpras          #+#    #+#             */
-/*   Updated: 2022/10/08 14:59:34 by climpras         ###   ########.fr       */
+/*   Updated: 2022/10/13 12:23:17 by climpras         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include <string.h>
+#include "libft.h"
 
 char	*ft_strchr(const char *s, int c)
 {

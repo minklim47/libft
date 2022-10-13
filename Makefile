@@ -6,7 +6,7 @@
 #    By: marvin <marvin@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/08/27 11:25:36 by climpras          #+#    #+#              #
-#    Updated: 2022/10/12 12:57:26 by climpras         ###   ########.fr        #
+#    Updated: 2022/10/13 12:34:58 by climpras         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -58,11 +58,11 @@ BONUS_OBJS = $(BONUS:.c=.o)
 
 all: $(NAME)
 
-%o: %c
+.c.o:
 	gcc $(FLAGS) -c $< -o $@
 
 $(NAME): $(OBJS) $(BONUS_OBJS)
-	ar -rcs $(NAME) $(OBJS)
+	ar -rc $(NAME) $(OBJS)
 
 clean: 
 	rm -f $(OBJS) $(BONUS_OBJS)

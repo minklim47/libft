@@ -6,12 +6,11 @@
 /*   By: climpras <climpras@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/24 15:17:45 by climpras          #+#    #+#             */
-/*   Updated: 2022/08/29 23:18:54 by climpras         ###   ########.fr       */
+/*   Updated: 2022/10/13 12:23:48 by climpras         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <string.h>
-#include <stdio.h>
+#include "libft.h" 
 
 size_t	ft_strlen(const char *s)
 {

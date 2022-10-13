@@ -6,12 +6,11 @@
 /*   By: climpras <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/28 09:02:42 by climpras          #+#    #+#             */
-/*   Updated: 2022/10/08 14:58:28 by climpras         ###   ########.fr       */
+/*   Updated: 2022/10/13 12:23:33 by climpras         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
-#include <stdio.h>
+#include "libft.h"
 
 int	ft_len(const char *s1)
 {
