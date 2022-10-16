@@ -6,7 +6,7 @@
 /*   By: climpras <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/27 18:47:11 by climpras          #+#    #+#             */
-/*   Updated: 2022/10/13 12:22:24 by climpras         ###   ########.fr       */
+/*   Updated: 2022/10/15 15:01:03 by climpras         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,10 +18,10 @@ void	*ft_memcpy(void *dst, const void *src, size_t n)
 
 	i = 0;
 	if (!dst && !src)
-		return (dst);
+		return (0);
 	while (n > 0)
 	{
-		*((char *)dst + i) = *((char *)src + i);
+		*((unsigned char *)dst + i) = *((unsigned char *)src + i);
 		i++;
 		n--;
 	}

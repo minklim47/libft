@@ -6,7 +6,7 @@
 /*   By: climpras <climpras@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/22 21:53:58 by climpras          #+#    #+#             */
-/*   Updated: 2022/10/13 16:20:44 by climpras         ###   ########.fr       */
+/*   Updated: 2022/10/15 22:15:44 by climpras         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ char	*ft_strchr(const char *s, int c)
 	}
 	if (*(unsigned char *)s == (unsigned char)c)
 		return ((char *)s);
-	return (NULL);
+	return (0);
 }
 /*
 int	main(void)

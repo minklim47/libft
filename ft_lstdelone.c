@@ -6,7 +6,7 @@
 /*   By: climpras <climpras@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/09 20:57:30 by climpras          #+#    #+#             */
-/*   Updated: 2022/10/09 22:35:09 by climpras         ###   ########.fr       */
+/*   Updated: 2022/10/15 13:49:28 by climpras         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,9 @@
 
 void	ft_lstdelone(t_list *lst, void (*del)(void *))
 {
-	if (lst)
+	if (lst && del)
+	{
 		(*del)(lst -> content);
+		free(lst);
+	}
 }

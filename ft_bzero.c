@@ -6,7 +6,7 @@
 /*   By: climpras <climpras@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/24 21:12:10 by climpras          #+#    #+#             */
-/*   Updated: 2022/10/13 15:01:36 by climpras         ###   ########.fr       */
+/*   Updated: 2022/10/15 14:27:42 by climpras         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ void	ft_bzero(void *s, size_t n)
 	i = 0;
 	while (i < n)
 	{
-		*(char *)(s + i) = 0;
+		*(unsigned char *)(s + i) = 0;
 		i++;
 	}
 }

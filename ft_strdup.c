@@ -6,30 +6,18 @@
 /*   By: climpras <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/28 09:02:42 by climpras          #+#    #+#             */
-/*   Updated: 2022/10/13 12:23:33 by climpras         ###   ########.fr       */
+/*   Updated: 2022/10/15 23:35:04 by climpras         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_len(const char *s1)
-{
-	int	i;
-
-	i = 0;
-	while (s1[i])
-		i++;
-	return (i);
-}
-
 char	*ft_strdup(const char *s1)
 {
 	int		i;
-	int		len;
 	char	*dest;
 
-	len = ft_len(s1);
-	dest = (char *)malloc(sizeof(char) * len + 1);
+	dest = (char *)malloc((sizeof(char) * ft_strlen(s1)) + 1);
 	if (!dest)
 		return (NULL);
 	i = 0;
