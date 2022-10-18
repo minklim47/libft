@@ -6,7 +6,7 @@
 /*   By: climpras <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/27 14:27:17 by climpras          #+#    #+#             */
-/*   Updated: 2022/10/13 12:24:02 by climpras         ###   ########.fr       */
+/*   Updated: 2022/10/17 14:20:58 by climpras         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,6 +29,5 @@ int	main(void)
 {
 	printf("%d\n", strncmp("abcd","abce", 3));
 	printf("%d\n", ft_strncmp("abcd","abce", 3));
-
 }
 */

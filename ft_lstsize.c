@@ -6,7 +6,7 @@
 /*   By: climpras <climpras@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/09 16:35:35 by climpras          #+#    #+#             */
-/*   Updated: 2022/10/09 16:48:48 by climpras         ###   ########.fr       */
+/*   Updated: 2022/10/17 18:00:38 by climpras         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ int	ft_lstsize(t_list *lst)
 	while (lst)
 	{
 		lst = lst -> next;
-		i++;	
+		i++;
 	}
 	return (i);
 }

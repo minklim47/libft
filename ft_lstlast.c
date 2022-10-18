@@ -6,7 +6,7 @@
 /*   By: climpras <climpras@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/09 17:00:47 by climpras          #+#    #+#             */
-/*   Updated: 2022/10/09 17:23:06 by climpras         ###   ########.fr       */
+/*   Updated: 2022/10/17 15:04:30 by climpras         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ t_list	*ft_lstlast(t_list *lst)
 {
 	if (!lst)
 		return (0);
-	while (lst -> next && lst)
+	while (lst -> next)
 	{
 		lst = lst -> next;
 	}
